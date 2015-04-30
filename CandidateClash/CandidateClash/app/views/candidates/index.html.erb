@@ -1,0 +1,17 @@
+<h1>Candidates#index</h1>
+<div class='candidate' id='HClinton'>
+  
+
+  <h1><%= @candidates[0].full_name %></h1>
+  <img src='<%= @candidates[0].image_url %>' height="75" width="100">
+  <ul>
+    <% for i in 0..@candidates[0].number_of_statements %>
+
+      <li><img src="<%= @candidates[0].statements[i-1]["ruling"]["canonical_ruling_graphic"] %>" height='50' width='50'>
+
+
+        <%= @candidates[0].statements[i-1]["statement"].html_safe %></li>
+    <% end %>
+
+  </ul>
+</div>
