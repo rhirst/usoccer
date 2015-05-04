@@ -1,17 +1,15 @@
-<h1>Candidates#index</h1>
-<div class='candidate' id='HClinton'>
+
+<div class='candidates'>
   
-
-  <h1><%= @candidates[0].full_name %></h1>
-  <img src='<%= @candidates[0].image_url %>' height="75" width="100">
-  <ul>
-    <% for i in 0..@candidates[0].number_of_statements %>
-
-      <li><img src="<%= @candidates[0].statements[i-1]["ruling"]["canonical_ruling_graphic"] %>" height='50' width='50'>
-
-
-        <%= @candidates[0].statements[i-1]["statement"].html_safe %></li>
-    <% end %>
-
-  </ul>
+<% @candidates.each do |politician| %>
+  <%= link_to candidates_show_path(:first_name => politician.first_name, :last_name => politician.last_name, :name_slug => politician.name_slug, :cid => politician.cid, :number_of_statements => 100, :photo_cred => politician.photo_cred) do %>
+    <div class='candidate <%=politician.party %>' id='<%= politician.name_slug %>'>
+      <img src='<%= politician.image_url %>' height="75">
+      <h1 class='index_name'><%=politician.full_name%></h1>
+      <div id='candidate_info'>
+        <%= politician.party %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 </div>

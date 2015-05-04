@@ -1,2 +1,15 @@
-<h1>Candidates#show</h1>
-<p>Find me in app/views/candidates/show.html.erb</p>
+
+<h1><%= @candidate.full_name %></h1>
+<div class="pic_board">
+  <img class='prof_pic' src='<%= @candidate.image_url %>'>
+  <p class='pic_text'><%= @candidate.photo_cred.html_safe %></p>
+</div>
+<h2>Credability: <%= @candidate.credability %>%</h2>
+<h2>Top Supporting Industries</h2>
+<ul>
+	<%# for i in 0..3 %>
+  <% @candidate.contributions["response"]["industries"]["industry"].each do |industry| %>
+		<li><%= industry["@attributes"]["industry_name"]%></li>
+  <% end %>
+</ul>
+

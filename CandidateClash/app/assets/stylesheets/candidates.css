@@ -1,0 +1,59 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.Democrat {
+	border: .15em solid #5882FA;
+}
+
+.Democrat:hover {
+	background-color: #E0E6F8;
+	transition: background-color .7s;
+}
+
+.Republican {
+	border: .15em solid #FA5858;
+}
+
+.Republican:hover {
+	background-color: #F8E0E0;
+	transition: background-color .7s
+}
+.Independent {
+	border: .15em solid #848484;
+}
+
+.Independent:hover {
+	background-color: #F2F2F2;
+	transition: background-color .7s
+}
+
+.candidate {
+	padding: 2em;
+	margin: 2em;
+	width: 30em;
+	display: inline-block;
+	color: #000;
+	border-radius: 1em;
+}
+
+.prof_pic {
+	width: 20em;
+	padding: 2em;
+}
+
+.pic_board {
+	background-color: #F5F6CE;
+	width: 24em;
+}
+
+.pic_text {
+	width: 20em;
+	padding: 0 2em 1em 2em;
+}
+
+.index_name {
+	display: inline;
+	vertical-align: 50%;
+	padding-left: 3em;
+}
